@@ -1,0 +1,47 @@
+{
+  "name": "ts-jest-babel-7-project-wide-config-repro-repo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/paulrehkugler/ts-jest-babel-7-project-wide-config-repro-repo.git",
+  "author": "Paul Rehkugler <paul@tumblr.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-preset-react-app": "^7.0.0",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  },
+  "scripts":{
+    "test": "jest"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "babelConfig": "babel.config.js"
+      }
+    },
+    "testMatch": [
+      "**/__tests__/**/*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)",
+      "**/tests.(js|jsx|ts|tsx)",
+      "**/*.tests.(js|jsx|ts|tsx)"
+    ],
+    "transform": {
+      ".(js|jsx|ts|tsx)": "./node_modules/ts-jest"
+    },
+    "moduleNameMapper": {},
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx",
+      "d.ts"
+    ],    
+    "reporters": [
+      "default"
+    ]
+  }
+}
